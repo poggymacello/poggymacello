@@ -15,22 +15,12 @@
 
 ---
 
-## 👋 About Me
-
-```yaml
-name:      Poggy Macello Gultom
-study:     Electrical Engineering @ Institut Teknologi Bandung
-focus:     [AI security, ML for cyber defense, LLM agents, cloud-native networking]
-building:  tools where the AI drafts, the rules decide, and a human signs off
-style:     real datasets, leakage-safe evaluation, metrics reported even when they drop
-currently: shipping hackathon prototypes → deployed demos
-```
-
-- 🛡️ Building **prompt-injection-resistant AI** — the LLM only proposes; policy and humans decide
-- 🔬 Researching **machine learning for cybersecurity** on real public datasets (UNSW-NB15, PhiUSIIL, BODMAS, N-BaIoT)
-- ☸️ Exploring **network function orchestration on Kubernetes**
-- 🔌 Open-source analog IC design — a capacitor-less LDO in **SKY130** for RF-harvested sensor tags (*ISSCC'27 Code-a-Chip*, PR merged)
-- 🏆 Regularly competing in national and international **hackathons & competitions**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./card-dark.svg">
+    <img alt="poggy@macello. Electrical Engineering at ITB, Bandung. AI security and ML for cyber defense. Live GitHub stats, refreshed daily." src="./card-light.svg" width="100%">
+  </picture>
+</p>
 
 ---
 

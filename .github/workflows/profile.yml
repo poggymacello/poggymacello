@@ -1,0 +1,29 @@
+name: Refresh profile card
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # 01:00 WIB
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Render neofetch card
+        run: python scripts/card.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit if anything changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add card-*.svg
+          git commit -m "Refresh profile card" || exit 0
+          git push
