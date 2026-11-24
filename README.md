@@ -1,3 +1,10 @@
+<a href="https://www.linkedin.com/in/poggymacello">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./chat-dark.svg">
+    <img alt="Hi, I'm Poggy. I study Electrical Engineering at ITB. This year I interned at EY on cyber risk and ISO 27001, and at NTUST in Taiwan hardening an O-RAN cloud. Before that: DevSecOps at AssistX, network design at XLSmart, gas turbine controls at PLN. I also led HME ITB. These days I build AI that can't be hijacked by the data it reads." src="./chat-light.svg">
+  </picture>
+</a>
+
 <!-- ============ HEADER ============ -->
 <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0f2027,40:7928CA,100:FF0080&text=Poggy%20Macello&fontColor=ffffff&fontSize=60&fontAlignY=38&desc=Electrical%20Engineering%20%40%20ITB%20%E2%80%A2%20AI%20Security%20%E2%80%A2%20Hackathon%20Builder&descAlignY=60&descSize=17&animation=fadeIn" width="100%"/>
 

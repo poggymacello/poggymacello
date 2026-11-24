@@ -1,8 +1,8 @@
-name: Refresh profile card
+name: Refresh profile card and chat
 
 on:
   schedule:
-    - cron: "0 18 * * *"   # 01:00 WIB
+    - cron: "0 */6 * * *"   # every 6 hours, so the weather stays fresh
   workflow_dispatch:
 
 permissions:
@@ -20,10 +20,14 @@ jobs:
         run: python scripts/card.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Render chat intro (live weather + latest repo)
+        run: python scripts/chat.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if anything changed
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add card-*.svg
-          git commit -m "Refresh profile card" || exit 0
+          git add card-*.svg chat-*.svg
+          git commit -m "Refresh profile card and chat" || exit 0
           git push
